@@ -1,0 +1,7 @@
+#Generates a QR code to a flyer archived in Zenodo in de colour #d44f24 to fit the design of another flyer for which I will use the QRcode
+install.packages("qrcode")
+library(qrcode)
+code <- qr_code("https://doi.org/10.5281/zenodo.7781754")
+print(code)
+plot(code)
+generate_svg(code,"C:/Users/sofie/Documents/sofie/bionomia.svg",foreground="#d44f24",background="white")
